@@ -52,6 +52,7 @@ Each topic is practiced in a **separate `.sql` file**
 - Indexes  
 - Auto Increment  
 - Views  
+- Stored Procedures
 - Transactions (COMMIT, ROLLBACK)  
 
 ### **7. Permissions & Users**

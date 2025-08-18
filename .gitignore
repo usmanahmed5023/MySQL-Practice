@@ -1,0 +1,29 @@
+# Ignore SQL dump files
+*.sql~
+
+# Ignore log files
+*.log
+*.err
+
+# Ignore temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore editor/IDE specific files
+.vscode/
+.idea/
+*.iml
+
+# Ignore compiled/backup files
+*.class
+*.out
+
+# Ignore node/npm stuff if mistakenly added
+node_modules/
+package-lock.json

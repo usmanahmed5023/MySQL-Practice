@@ -1,7 +1,9 @@
 # Database Revision with MySQL
 
-This repository contains practice exercises and SQL scripts for revising **MySQL Database Concepts**
-Each topic is practiced in a **separate `.sql` file** 
+This repository contains practice exercises and SQL scripts for revising **MySQL Database Concepts**.  
+Each topic is practiced in a **separate `.sql` file**.  
+In addition, I have also created a **Relational Database Model (RDM)** and an **ERD Diagram** for a **Vaccination Management System**.
+
 ---
 
 ## 🎯 Objectives
@@ -12,6 +14,7 @@ Each topic is practiced in a **separate `.sql` file**
 - Implement **Normalization (1NF, 2NF, 3NF)**.
 - Develop **ERD** and **Relational Data Model (RDM)**.
 - Prepare for viva by understanding each topic in depth.
+- Design and represent **Vaccination Management System** using **ERD** and **RDM**.
 
 ---
 
@@ -52,8 +55,17 @@ Each topic is practiced in a **separate `.sql` file**
 - Indexes  
 - Auto Increment  
 - Views  
-- Stored Procedures
+- Stored Procedures  
 - Transactions (COMMIT, ROLLBACK)  
 
 ### **7. Permissions & Users**
 - CREATE / ALTER / DROP USER  
+
+---
+
+## 🏥 Vaccination Management System
+- Designed a **Relational Database Model (RDM)**.  
+- Created an **Entity Relationship Diagram (ERD)**.  
+- Covers entities like **Users, Roles, Admin, Health Workers, Citizens, Vaccines, Vaccination Records, and Districts**.  
+- Helps in understanding how database design is applied to **real-world systems**.  
+

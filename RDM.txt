@@ -1,0 +1,66 @@
+📌 Vaccination Management System – Relational Database Model (RDM)
+🧑‍💻 Users
+
+UserID (PK), RoleID (FK → Roles.RoleID), Username, Password, Email, PhoneNo, 
+Province_id (FK → Province.Province_id), District_id (FK → District.District_id),
+ Tehsil_id (FK → Tehsil.Tehsil_id), Uc_id (FK → UnionCouncil.Uc_id), Village_id (FK → Village.Village_id)
+
+🎭 Roles
+
+RoleID (PK), Name
+
+👨‍💼 Admin
+
+AdminID (PK), UserID (FK → Users.UserID)
+
+🏥 HealthWorkers
+
+HWID (PK), FullName, Contact, AssignedArea (TehsilID or UCID), UserID (FK → Users.UserID)
+
+👥 Citizens
+
+CitizenID (PK), CNIC, FullName, DOB, Gender, Contact, HomeID (FK → Home.HomeID), UserID (FK → Users.UserID)
+
+🔐 Permissions
+
+PermissionID (PK), RoleID (FK → Roles.RoleID), CanView, CanInsert, CanUpdate, CanDelete
+
+📜 RolePermissions
+
+RoleID (FK → Roles.RoleID), PermissionID (FK → Permissions.PermissionID), PK (RoleID, PermissionID)
+
+🏳 Province
+
+Province_id (PK), Name
+
+🏛 Division
+
+Division_id (PK), Province_id (FK → Province.Province_id), Name
+
+🏢 District
+
+District_id (PK), Division_id (FK → Division.Division_id), Name
+
+🏘 Tehsil
+
+Tehsil_id (PK), District_id (FK → District.District_id), Name
+
+🏡 UnionCouncil
+
+Uc_id (PK), Tehsil_id (FK → Tehsil.Tehsil_id), Name (Unique within Tehsil)
+
+🌍 Village
+
+Village_id (PK), Uc_id (FK → UnionCouncil.Uc_id), Name
+
+🏠 Home
+
+HomeID (PK), Address, HouseNo, Street, VillageID (FK → Village.VillageID)
+
+💉 Vaccines
+
+VaccineID (PK), VaccineName, Manufacturer, TotalRequiredDoses
+
+📊 CitizenVaccination
+
+CVID (PK), CitizenID (FK → Citizens.CitizenID), VaccineID (FK → Vaccines.VaccineID), DoseNumber, VaccinationDate, HealthWorkerID (FK → HealthWorkers.HWID)
